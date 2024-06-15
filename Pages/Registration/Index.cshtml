@@ -1,0 +1,138 @@
+﻿@page
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<div class="main mx-3 pb-5">
+    <!-- Include partial view for tabs -->
+    @await Html.PartialAsync("_TabsPartial")
+
+    <div class="tab-content" id="myTabContent">
+        <!-- Include partial view for tab content -->
+        @await Html.PartialAsync("_TabContentPartial")
+
+        <!-- Static Picture Tab -->
+        <div class="tab-pane fade" id="picstatic-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="row justify-content-center align-items-center mt-3">
+                <div class="col-md-12 text-center">
+                    <!-- Image container for cover image -->
+                    <div class="image-container mb-3">
+                        <img src="dist/img/portada.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary portada" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Cover Image</p>
+                    </div>
+                </div>
+
+                <!-- Grid for first set of images -->
+                <div class="col-md-6 text-center">
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #1</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #2</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #3</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #4</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #5</p>
+                    </div>
+                </div>
+
+                <!-- Grid for second set of images -->
+                <div class="col-md-6 text-center">
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #6</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #7</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #8</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #9</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="dist/img/boxed-bg.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                        <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                        <p class="image-caption">Image #10</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons row for Clean, Cancel, and Next -->
+            <div class="row mt-3 mb-5">
+                <div class="col-4 text-center mb-2">
+                    <button type="button" class="btn btn-warning">Clean</button>
+                </div>
+                <div class="col-4 text-center mb-2">
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </div>
+                <div class="col-4 text-center mb-2">
+                    <button type="button" class="btn btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Picture Tab -->
+        <div class="tab-pane fade" id="picdinamic-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <div class="col-md-12 text-center mt-3">
+                <!-- Image container for inside image -->
+                <div class="image-container">
+                    <img src="dist/img/portada.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                    <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                    <p class="image-caption">Inside Image</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center mt-3">
+                <!-- Image container for outside image -->
+                <div class="image-container">
+                    <img src="dist/img/portada.jpg" alt="Image 1" class="img-fluid mb-3 border border-secondary" />
+                    <button class="btn btn-primary center-button"><i class="fa fa-upload"></i> Upload PNG</button>
+                    <p class="image-caption">Outside Image</p>
+                </div>
+            </div>
+
+            <!-- Buttons row for Clean, Cancel, and Next -->
+            <div class="row mt-3 mb-5">
+                <div class="col-4 text-center mb-2">
+                    <button type="button" class="btn btn-warning">Clean</button>
+                </div>
+                <div class="col-4 text-center mb-2">
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </div>
+                <div class="col-4 text-center mb-2">
+                    <button type="button" class="btn btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Include partial view for cost content -->
+        @await Html.PartialAsync("_TabContentCost")
+    </div>
+</div>
+</div> <!-- Added closing div tag for main container -->

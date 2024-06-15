@@ -1,0 +1,15 @@
+﻿@model Tuple<string, string, string, bool>
+
+<div class="input-group mb-3">
+    <!-- Icon -->
+    <span class="input-group-text px-2"><i class="fa @Model.Item1"></i></span>
+    
+    <!-- Input field -->
+    <input type="text" class="form-control" placeholder="@Model.Item2" @Model.Item3 />
+    
+    <!-- Optional button based on Model.Item4 flag -->
+    @if (Model.Item4)
+    {
+        <button class="btn btn-outline-secondary" type="button"><i class="fa fa-paste"></i></button>
+    }
+</div>

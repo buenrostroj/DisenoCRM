@@ -1,0 +1,127 @@
+﻿@* _TabContentPartial.cshtml *@
+<div class="tab-pane fade show active" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+    <div class="">
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="post clearfix">
+                    <div class="box-body">
+                        <div class="form-group input-group">
+                            <!-- Commercial Size selection -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa fa-shopping-bag"></i></span>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>* Commercial Size</option>
+                                    <option value="1">Micro</option>
+                                    <option value="2">Small</option>
+                                    <option value="3">Medium</option>
+                                    <option value="4">Large</option>
+                                </select>
+                            </div>
+
+                            <!-- Length, Latitude, Commercial Name, Slogan, Tag inputs using partial views -->
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-ruler-horizontal", "* Length (100)", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-ruler-vertical", "* Latitude (100)", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-store", "* Commercial Name (50)", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-bullhorn", "* Slogan (30)", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-tag", "* Tag (25)", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-road", "* Street and number", "", false))
+
+                            <!-- State selection -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa fa-building"></i></span>
+                                <select class="form-select">
+                                    <option selected>* State</option>
+                                    <option value="1">Colima</option>
+                                    <option value="2">Jalisco</option>
+                                    <option value="3">Sonora</option>
+                                    <option value="4">Guanajuato</option>
+                                </select>
+                            </div>
+
+                            <!-- Municipality selection -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa fa-city"></i></span>
+                                <select class="form-select">
+                                    <option selected>* Municipality</option>
+                                    <option value="1">Tecomán</option>
+                                    <option value="2">Armeria</option>
+                                    <option value="3">Ixtlahuacan</option>
+                                    <option value="4">Villa de Álvarez</option>
+                                </select>
+                            </div>
+
+                            <!-- Postal code input using partial view -->
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-envelope", "Postal code", "disabled", false))
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="post clearfix">
+                    <div class="box-body">
+                        <div class="form-group input-group">
+                            <!-- Email, Local telephone, Mobile phone, Whatsapp link, Website link, Facebook link, Instagram link, MercadoLibre link, TikTok link inputs using partial views -->
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-envelope", "Email", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-phone", "Local telephone", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-mobile", "* Mobile phone", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-whatsapp", "Whatsapp link", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-globe", "Website link", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-facebook", "Facebook link", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-instagram", "Instagram link", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-ml", "MercadoLibre link", "", true))
+                            @await Html.PartialAsync("_InputGroupPartial", Tuple.Create("fa-ml", "TikTok link", "", true))
+
+                            <!-- Schedule type selection -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa fa-clock"></i></span>
+                                <select class="form-select">
+                                    <option selected>* Schedule type</option>
+                                    <option value="1">Mixed</option>
+                                    <option value="2">Continuous</option>
+                                    <option value="3">Partial</option>
+                                    <option value="4">24 hours</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="post clearfix">
+                    <div class="box-body">
+                        <div class="form-group input-group">
+                            <!-- Commercial Description textarea -->
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="" id="" style="height: 250px"></textarea>
+                                <label for="">* Commercial Description (350)</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group">
+                            <!-- Social Description textarea -->
+                            <div class="form-floating mt-2">
+                                <textarea class="form-control" placeholder="" id="" style="height: 250px"></textarea>
+                                <label for="">* Social Description (250)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons for Clean, Cancel, and Next actions -->
+        <div class="row mt-3 mb-5">
+            <div class="col-4 text-center mb-2">
+                <button type="button" class="btn btn-warning"> Clean</button>
+            </div>
+            <div class="col-4 text-center mb-2">
+                <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+            <div class="col-4 text-center mb-2">
+                <button type="button" class="btn btn-primary"> Next</button>
+            </div>
+        </div>
+    </div>
+</div>
